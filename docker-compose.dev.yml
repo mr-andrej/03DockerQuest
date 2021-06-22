@@ -16,7 +16,7 @@ services:
         build:
             context: ./client/my-app
         volumes:
-            - ./client/src/:/app/src
+            - ./client/my-app/src/:/my-app/src
             - '/my-app/node_modules'
         ports:
             - 8080:3000
