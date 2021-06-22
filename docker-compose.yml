@@ -1,0 +1,9 @@
+version: "3.3"
+  services:
+  server:
+    build: ./server
+    image: express-docker
+    ports:
+      - 5052:5000
+  mongodb:
+    image: mongo
