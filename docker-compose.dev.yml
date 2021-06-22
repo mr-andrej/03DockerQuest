@@ -9,11 +9,14 @@ services:
             - ./server/src/:/app/src/
     mongodb:
         image: mongo
+        volumes: 
+            - ./data:/data/db
     client:
         container_name: client-service
         build:
             context: ./client/my-app
         volumes:
+            - ./client/src/:/app/src
             - '/my-app/node_modules'
         ports:
             - 8080:3000
